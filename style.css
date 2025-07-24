@@ -242,3 +242,35 @@ footer {
   font-size: 1.2rem;
   color: #643173;
 }
+/* 🌐 Top Navigation Styles */
+.top-nav {
+  background-color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  gap: 20px;
+}
+
+.top-nav .logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #643173;
+}
+
+.top-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.top-nav a:hover {
+  color: #643173;
+}
