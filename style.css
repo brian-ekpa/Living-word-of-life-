@@ -1,4 +1,5 @@
 
+
 /* Import a beautiful Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap');
 
@@ -81,4 +82,47 @@ footer {
     flex-direction: column;
     gap: 0.5rem;
   }
+}
+.devotional-card {
+  background-color: #fff;
+  border: 1px solid #e6d5ea;
+  border-left: 5px solid #643173;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 10px rgba(100, 49, 115, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.devotional-card:hover {
+  transform: scale(1.01);
+}
+
+.devotional-title {
+  font-size: 1.4rem;
+  color: #3e1e53;
+  margin-bottom: 0.5rem;
+}
+
+.devotional-date {
+  font-size: 0.9rem;
+  color: #8e679f;
+  margin-bottom: 1rem;
+}
+
+.devotional-preview {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.read-more {
+  text-decoration: none;
+  color: #643173;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.read-more:hover {
+  color: #3e1e53;
 }
