@@ -208,3 +208,37 @@ footer {
   font-size: 1.2rem;
   font-style: italic;
 }
+/* 🌐 Top Nav Bar */
+.top-nav {
+  background-color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-left {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.top-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.top-nav a:hover {
+  color: #643173;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #643173;
+}
