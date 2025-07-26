@@ -1,140 +1,158 @@
 <!DOCTYPE html>
-<html Lang="en">
+<html lang="en">
 <head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Living Word of Life</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff;
+      color: #222;
+    }
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-  
+    header {
+      background: #4b0082;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: url('https://source.unsplash.com/featured/?bible') no-repeat center center/cover;
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+
+    .section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .devotional-card {
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      background: #f9f9f9;
+    }
+
+    .daily-verse {
+      background: #4b0082;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-style: italic;
+    }
+
+    .footer {
+      background: #eee;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+
+    .prayer-form input, .prayer-form textarea {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .prayer-form button {
+      background: #4b0082;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
 </head>
-  <nav class="top-nav">
-  <div class="nav-left">
-    <a href="#" class="logo"><i class="fas fa-book-open"></i> Living Word</a>
-    <a href="#"><i class="fas fa-home"></i> Home</a>
-    <a href="#"><i class="fas fa-heart"></i> Devotionals</a>
-    <a href="#"><i class="fas fa-info-circle"></i> About</a>
-  </div>
-</nav>
 <body>
-  
-  <!-- Hero Banner Start -->
-<header class="hero-banner">
-  <div class="hero-content">
-    <h1>Living Word of Life</h1>
-    <p>Sharing the truth and love of God daily</p>
-  </div>
-</header>
-<!-- Hero Banner End -->
   <header>
-    <h1>Living Word of Life</h1>
+    <div class="logo">Living Word</div>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="blog.html">Devotionals</a>
-      <a href="about.html">About</a>
+      <a href="#">Home</a>
+      <a href="#devotionals">Devotionals</a>
+      <a href="#about">About</a>
     </nav>
   </header>
 
-  <main>
+  <div class="daily-verse">“The Lord is my shepherd; I shall not want.” – Psalm 23:1</div>
 
+  <div class="hero">
+    <h1>Living Word of Life</h1>
+    <p>Sharing the truth and love of God daily</p>
+  </div>
 
-<div class="devotional-card">
-  <h3 class="devotional-title">God's Promises Are True</h3>
-  <p class="devotional-date">July 24, 2025</p>
-  <p class="devotional-preview">
-    Today, remember that God's promises never fail. In times of fear or doubt, turn to His Word...
-  </p>
-  <a href="#" class="read-more">Read More</a>
-</div>
+  <section class="section" id="devotionals">
+    <h2>Today's Devotional</h2>
+    <div class="devotional-card">
+      <h3>Invest in People Not Just Possessions</h3>
+      <p>“Let each of you look not only to his own interests, but also to the interests of others.” – Philippians 2:4</p>
+      <p>Written by Biddy Offiah</p>
+    </div>
+  </section>
 
-<div class="devotional-card">
-  <h3 class="devotional-title">Faith Over Fear</h3>
-  <p class="devotional-date">July 23, 2025</p>
-  <p class="devotional-preview">
-    Fear tries to creep in, but faith is the victory that overcomes the world. Let God's peace guide you today...
-  </p>
-  <a href="#" class="read-more">Read More</a>
-</div>
-    
-    <div id="daily-verse" style="
-  background-color: #e6d5ea;
-  color: #3e1e53;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.1rem;
-  padding: 1rem;
-  margin-bottom: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(100, 49, 115, 0.1);
-">
-  Loading daily verse...
-</div>
-    <section class="hero">
-      <h2>Welcome to Living Word of Life</h2>
-      <p>A place of peace, encouragement, and daily inspiration through God's Word.</p>
-    </section>
+  <section class="section" id="prayer">
+    <h2>Prayer Request</h2>
+    <form class="prayer-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="4" placeholder="Your Prayer Request" required></textarea>
+      <button type="submit">Send Prayer</button>
+    </form>
+  </section>
 
-    <section class="verse">
-      <h3>Verse of the Day</h3>
-      <blockquote>"The grass withers and the flowers fall, but the word of our God endures forever." – Isaiah 40:8</blockquote>
-    </section>
+  <section class="section" id="about">
+    <h2>About</h2>
+    <p>Living Word of Life is a biblical resource site where you can find devotionals, prayer inspiration, and sound counsel from the Word of God. Updated daily by Grandma and team.</p>
+  </section>
 
-    <section class="latest-posts">
-      <h3>Latest Devotionals</h3>
-      <div class="posts">
-        <article>
-          <h4>Jesus, the Light of the World</h4>
-          <p>“In Him was life, and that life was the light of all mankind.” – John 1:4</p>
-          <a href="#">Read More</a>
-        </article>
-        <article>
-          <h4>Faith Over Fear</h4>
-          <p>“When I am afraid, I put my trust in you.” – Psalm 56:3</p>
-          <a href="#">Read More</a>
-        </article>
-      </div>
-    </section>
-  </main>
-
-<section class="prayer-section">
-  <h2>Prayer Request</h2>
-  <form action="https://formsubmit.co/YOUR_EMAIL" method="POST" class="prayer-form">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email (optional)">
-    <textarea name="request" placeholder="Enter your prayer request..." rows="5" required></textarea>
-    <button type="submit">Send Prayer Request</button>
-  </form>
-</section>
-
-  
-  <footer>
-    <p>&copy; 2025 Living Word of Life. All rights reserved.</p>
-    <p><a href="#">Support the Ministry</a></p>
-  </footer>
-  <script>
-  const verses = [
-    "Philippians 4:13 - I can do all things through Christ who strengthens me.",
-    "Jeremiah 29:11 - For I know the plans I have for you, declares the Lord.",
-    "Psalm 23:1 - The Lord is my shepherd, I shall not want.",
-    "Romans 8:28 - All things work together for good to those who love God.",
-    "Proverbs 3:5 - Trust in the Lord with all your heart.",
-    "John 3:16 - For God so loved the world that He gave His only Son.",
-    "Isaiah 41:10 - Do not fear, for I am with you."
-  ];
-
-  const today = new Date().getDate();
-  const verse = verses[today % verses.length];
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const verseBanner = document.getElementById("daily-verse");
-    if (verseBanner) {
-      verseBanner.innerText = verse;
-    }
-  });
-</script>
+  <div class="footer">
+    &copy; 2025 Living Word of Life. All rights reserved.
+  </div>
 </body>
 </html>
+
+
+I've generated a new index.html for your Living Word of Life website with all the updated features and a cleaner, more engaging design. You can now upload this to your Netlify site via GitHub.
+
+Would you like help uploading it or editing the CSS further (e.g., font, layout, or mobile view)?
+
