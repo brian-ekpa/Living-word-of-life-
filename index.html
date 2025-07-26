@@ -1,190 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Living Word of Life</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #f8f9fa;
-      color: #333;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9f9f9;
     }
-
-    header {
-      background-color: #283593;
+    .header {
+      background-color: #5e2b97;
       color: white;
-      padding: 20px 40px;
+      padding: 1rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
     }
-
     .logo {
       font-size: 1.5rem;
       font-weight: bold;
     }
-
-    nav a {
-      margin-left: 20px;
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .hero {
-      background: url('https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d') center/cover no-repeat;
-      padding: 80px 20px;
-      color: white;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-
-    .verse-box {
-      background: #e3f2fd;
-      margin: 30px auto;
-      max-width: 800px;
-      padding: 20px;
-      border-left: 5px solid #1976d2;
-      font-style: italic;
-    }
-
-    .devotionals {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: 8px;
-    }
-
-    .card h3 {
-      margin-top: 15px;
-      font-size: 1.2rem;
-    }
-
-    .form-section {
-      padding: 40px 20px;
-      background: #eeeeee;
-      text-align: center;
-    }
-
-    form {
-      max-width: 500px;
-      margin: auto;
-    }
-
-    input, textarea, button {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      font-family: 'Poppins';
-    }
-
-    button {
-      background-color: #283593;
-      color: white;
-      border: none;
+    .menu-icon {
+      font-size: 1.5rem;
       cursor: pointer;
     }
-
-    footer {
-      background: #1a237e;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
+    .side-menu {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      background-color: white;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    }
+    .side-menu a {
+      padding: 10px 30px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #5e2b97;
+      display: block;
+      transition: 0.3s;
+    }
+    .side-menu a:hover {
+      background-color: #f1f1f1;
+    }
+    .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      font-size: 36px;
+    }
+    @media (min-width: 768px) {
+      .menu-icon { display: none; }
+      .side-menu { width: auto; position: static; box-shadow: none; height: auto; padding: 0; display: flex; background: none; }
+      .side-menu a { color: white; padding: 0 15px; }
     }
   </style>
 </head>
-
 <body>
-  <header>
-    <div class="logo">Living Word of Life</div>
-    <nav>
+
+  <div class="header">
+    <div class="logo">Living Word</div>
+    <span class="menu-icon" onclick="openMenu()"><i class="fas fa-bars"></i></span>
+    <div id="sideMenu" class="side-menu">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
       <a href="#">Home</a>
-      <a href="#devotionals">Devotionals</a>
-      <a href="#about">About</a>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <h1>Sharing the truth and love of God daily</h1>
-    <p>"Thy word is a lamp unto my feet, and a light unto my path." - Psalm 119:105</p>
-  </section>
-
-  <div class="verse-box">
-    "For I know the plans I have for you," declares the Lord, "plans to prosper you and not to harm you, plans to give you hope and a future." - Jeremiah 29:11
+      <a href="#">Daily Devotional</a>
+      <a href="#">About</a>
+      <a href="#">Blog</a>
+      <a href="#">Prayer Request</a>
+    </div>
   </div>
 
-  <section class="devotionals" id="devotionals">
-    <div class="card">
-      <img src="https://source.unsplash.com/400x200/?bible,faith" alt="Devotion">
-      <h3>Trusting God's Timing</h3>
-      <p>Learn how to wait patiently and trust in His divine plan for your life...</p>
-    </div>
-    <div class="card">
-      <img src="https://source.unsplash.com/400x200/?cross,prayer" alt="Devotion">
-      <h3>Power of Prayer</h3>
-      <p>Explore how consistent prayer brings peace and answers beyond imagination...</p>
-    </div>
-    <div class="card">
-      <img src="https://source.unsplash.com/400x200/?church,peace" alt="Devotion">
-      <h3>Walking in Love</h3>
-      <p>Discover what it means to walk in love daily just as Christ did...</p>
-    </div>
-  </section>
+  <script>
+    function openMenu() {
+      document.getElementById("sideMenu").style.width = "250px";
+    }
+    function closeMenu() {
+      document.getElementById("sideMenu").style.width = "0";
+    }
+  </script>
 
-  <section class="form-section">
-    <h2>Prayer Request</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea rows="4" placeholder="Your Prayer Request"></textarea>
-      <button type="submit">Submit</button>
-    </form>
-  </section>
+  <!-- Your main content below -->
+  <div style="padding: 2rem;">
+    <h1>Welcome to Living Word of Life</h1>
+    <p>Sharing the truth and love of God daily.</p>
+  </div>
 
-  <section class="form-section">
-    <h2>Subscribe for Daily Devotionals</h2>
-    <form>
-      <input type="email" placeholder="Enter your email" required>
-      <button type="submit">Subscribe</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Living Word of Life. All rights reserved.</p>
-    <p>Follow us on:
-      <a href="#" style="color: #fff; margin: 0 5px;"><i class="fab fa-facebook"></i></a>
-      <a href="#" style="color: #fff; margin: 0 5px;"><i class="fab fa-instagram"></i></a>
-    </p>
-  </footer>
 </body>
-
 </html>
 
 
