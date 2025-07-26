@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Invest in People, Not Just Possessions</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fdfdfd;
+      color: #333;
+    }
+
+    header {
+      background-color: #4a2d82;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background-color: #4a2d82;
+      padding: 1rem;
+    }
+
+    .mobile-nav a {
+      color: white;
+      text-decoration: none;
+      margin-bottom: 0.5rem;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    article h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    article small {
+      color: #777;
+    }
+
+    article p {
+      margin: 1.5rem 0;
+      line-height: 1.6;
+    }
+
+    a.back-link {
+      display: inline-block;
+      margin-top: 2rem;
+      text-decoration: none;
+      color: #4a2d82;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #4a2d82;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .mobile-nav.show {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Living Word of Life</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#">Devotionals</a>
+      <a href="#">About</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMobileNav()">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="#">Devotionals</a>
+    <a href="#">About</a>
+  </div>
+
+  <main>
+    <article>
+      <h1>Invest in People, Not Just Possessions</h1>
+      <small>July 23, 2025</small>
+
+      <p><strong>“For where your treasure is, there your heart will be also.” — Matthew 6:21</strong></p>
+
+      <p>
+        In a world where material things are often valued more than relationships, Jesus reminds us to invest where it truly matters — in the hearts and lives of people.
+      </p>
+
+      <p>
+        Possessions fade, trends change, and wealth can disappear. But when we love, serve, forgive, and encourage others, we build something that cannot be lost — a lasting legacy of faith.
+      </p>
+
+      <p>
+        Let’s shift our hearts from gathering things to growing souls. Our greatest return will come not from what we own, but from who we impact.
+      </p>
+
+      <a href="index.html" class="back-link">&larr; Back to Homepage</a>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Living Word of Life. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMobileNav() {
+      document.getElementById('mobileNav').classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>
+
+
