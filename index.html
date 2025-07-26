@@ -1,112 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Living Word of Life</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #fff;
-      color: #222;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
     }
 
     header {
-      background: #4b0082;
+      background-color: #283593;
       color: white;
-      padding: 1rem 2rem;
+      padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      flex-wrap: wrap;
     }
 
     .logo {
-      font-family: 'Playfair Display', serif;
       font-size: 1.5rem;
       font-weight: bold;
     }
 
     nav a {
-      margin: 0 1rem;
+      margin-left: 20px;
       color: white;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 500;
     }
 
     .hero {
-      background: url('https://source.unsplash.com/featured/?bible') no-repeat center center/cover;
+      background: url('https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d') center/cover no-repeat;
+      padding: 80px 20px;
       color: white;
-      padding: 4rem 2rem;
       text-align: center;
     }
 
     .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
     }
 
-    .hero p {
-      font-size: 1.2rem;
+    .verse-box {
+      background: #e3f2fd;
+      margin: 30px auto;
+      max-width: 800px;
+      padding: 20px;
+      border-left: 5px solid #1976d2;
       font-style: italic;
     }
 
-    .section {
-      padding: 2rem;
-      max-width: 800px;
+    .devotionals {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+      max-width: 1200px;
       margin: auto;
     }
 
-    .devotional-card {
-      border: 1px solid #eee;
+    .card {
+      background: white;
+      padding: 20px;
       border-radius: 10px;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      background: #f9f9f9;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
-    .daily-verse {
-      background: #4b0082;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-      font-style: italic;
-    }
-
-    .footer {
-      background: #eee;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      margin-top: 3rem;
-    }
-
-    .prayer-form input, .prayer-form textarea {
-      display: block;
+    .card img {
       width: 100%;
-      margin-bottom: 1rem;
-      padding: 0.5rem;
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      margin-top: 15px;
+      font-size: 1.2rem;
+    }
+
+    .form-section {
+      padding: 40px 20px;
+      background: #eeeeee;
+      text-align: center;
+    }
+
+    form {
+      max-width: 500px;
+      margin: auto;
+    }
+
+    input, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
       border-radius: 5px;
       border: 1px solid #ccc;
+      font-family: 'Poppins';
     }
 
-    .prayer-form button {
-      background: #4b0082;
+    button {
+      background-color: #283593;
       color: white;
-      padding: 0.5rem 1rem;
       border: none;
-      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #1a237e;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
     }
   </style>
 </head>
+
 <body>
   <header>
-    <div class="logo">Living Word</div>
+    <div class="logo">Living Word of Life</div>
     <nav>
       <a href="#">Home</a>
       <a href="#devotionals">Devotionals</a>
@@ -114,43 +131,60 @@
     </nav>
   </header>
 
-  <div class="daily-verse">“The Lord is my shepherd; I shall not want.” – Psalm 23:1</div>
+  <section class="hero">
+    <h1>Sharing the truth and love of God daily</h1>
+    <p>"Thy word is a lamp unto my feet, and a light unto my path." - Psalm 119:105</p>
+  </section>
 
-  <div class="hero">
-    <h1>Living Word of Life</h1>
-    <p>Sharing the truth and love of God daily</p>
+  <div class="verse-box">
+    "For I know the plans I have for you," declares the Lord, "plans to prosper you and not to harm you, plans to give you hope and a future." - Jeremiah 29:11
   </div>
 
-  <section class="section" id="devotionals">
-    <h2>Today's Devotional</h2>
-    <div class="devotional-card">
-      <h3>Invest in People Not Just Possessions</h3>
-      <p>“Let each of you look not only to his own interests, but also to the interests of others.” – Philippians 2:4</p>
-      <p>Written by Biddy Offiah</p>
+  <section class="devotionals" id="devotionals">
+    <div class="card">
+      <img src="https://source.unsplash.com/400x200/?bible,faith" alt="Devotion">
+      <h3>Trusting God's Timing</h3>
+      <p>Learn how to wait patiently and trust in His divine plan for your life...</p>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/400x200/?cross,prayer" alt="Devotion">
+      <h3>Power of Prayer</h3>
+      <p>Explore how consistent prayer brings peace and answers beyond imagination...</p>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/400x200/?church,peace" alt="Devotion">
+      <h3>Walking in Love</h3>
+      <p>Discover what it means to walk in love daily just as Christ did...</p>
     </div>
   </section>
 
-  <section class="section" id="prayer">
+  <section class="form-section">
     <h2>Prayer Request</h2>
-    <form class="prayer-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea rows="4" placeholder="Your Prayer Request" required></textarea>
-      <button type="submit">Send Prayer</button>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Prayer Request"></textarea>
+      <button type="submit">Submit</button>
     </form>
   </section>
 
-  <section class="section" id="about">
-    <h2>About</h2>
-    <p>Living Word of Life is a biblical resource site where you can find devotionals, prayer inspiration, and sound counsel from the Word of God. Updated daily by Grandma and team.</p>
+  <section class="form-section">
+    <h2>Subscribe for Daily Devotionals</h2>
+    <form>
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
   </section>
 
-  <div class="footer">
-    &copy; 2025 Living Word of Life. All rights reserved.
-  </div>
+  <footer>
+    <p>&copy; 2025 Living Word of Life. All rights reserved.</p>
+    <p>Follow us on:
+      <a href="#" style="color: #fff; margin: 0 5px;"><i class="fab fa-facebook"></i></a>
+      <a href="#" style="color: #fff; margin: 0 5px;"><i class="fab fa-instagram"></i></a>
+    </p>
+  </footer>
 </body>
+
 </html>
-
-
 
 
